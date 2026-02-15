@@ -1,0 +1,67 @@
+/* for all */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 500px;
+    height: auto;
+}
+:root {
+  --primary-color: #2E3148;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+/* home */
+.home .home-container{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0px 5px 50px var(--black);
+}
+.home .home-container .home-info{
+    width: 60%;
+    padding: 40px;
+}
+.home .home-container .home-info h4{
+    
+}
+.home .home-container .home-info h2{
+    padding: 20px 0;
+    font-size: 45px;
+}
+.home .home-container .home-info h2 span{
+    color:rgb(15, 86, 88);
+}
+.home .home-container .home-info .tagline{
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+.home .home-container .home-info .basic-info{
+    margin-top: 20px;
+    text-align: justify;
+}
+.home .home-container .home-visual{
+    width: 40%;
+}
+.home .home-container .home-visual .github-profile-link{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-image: url('../images/ifty.jpeg');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s;
+}
+.home .home-container .home-visual .github-profile-link:hover{
+    transform: scale(1.05);
+}
