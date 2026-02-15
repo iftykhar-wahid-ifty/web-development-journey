@@ -1,0 +1,34 @@
+Ifty’s Portfolio - Simple Webpage
+=================================
+Sections that I'll be using here: 
+1. Home
+2. About
+3. Skills
+4. Projects
+5. Education
+6. Contact
+7. Footer
+
+===============
+Section: Home: 
+===============
+- Cover Image	: ifty-cover.jpeg
+- Tagline	    : CSE Student | Aspiring Frontend Developer
+- Lines 	    : I’m currently learning HTML, CSS, and JavaScript to build modern and responsive websites.
+I enjoy creating clean, user-friendly designs that are both functional and visually appealing. My goal is to improve my frontend skills and eventually become a professional web developer. I’m always exploring new technologies and techniques to grow as a developer every day.
+
+.home .home-container .home-visual .github-link {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* makes it square, you can use 4/3 or 16/9 if you want */
+    background-image: url('../images/ifty.jpeg'); /* path to your image */
+    background-size: cover;      /* fill the div */
+    background-position: center; /* center the image */
+    border: 1px solid black;     /* optional border */
+    border-radius: 10px;         /* optional rounded corners */
+    transition: transform 0.3s;  /* hover effect */
+}
+
+.home .home-container .home-visual .github-link:hover {
+    transform: scale(1.05); /* subtle hover zoom effect */
+}
