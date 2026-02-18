@@ -1,3 +1,14 @@
+For All Folders: 
 Get-ChildItem -Recurse -Directory | ForEach-Object {
     New-Item -Path "$($_.FullName)\.gitignore" -ItemType File
+}
+
+For empty folders: 
+# Get all directories recursively
+Get-ChildItem -Recurse -Directory | ForEach-Object {
+    # Check if the folder is empty (no files, no subfolders)
+    if (-not (Get-ChildItem -Path $_.FullName)) {
+        # Create an empty .gitignore file inside the empty folder
+        New-Item -Path "$($_.FullName)\.gitignore" -ItemType File -Force
+    }
 }
