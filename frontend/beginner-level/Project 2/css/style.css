@@ -1,0 +1,457 @@
+/* for all */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 1.1px;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style-type: none;
+}
+.container{
+  display: flex;
+  padding: 20px 0;
+}
+.point del {
+  color: var(--color-text-secondary);              /* light gray */
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--color-text-secondary);
+}
+@keyframes floatSide {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+:root {
+  /* ========== Neutrals ========== */
+  --color-bg-primary: #F8F8F8;
+  --color-bg-dark: #30393B;
+
+  --color-text-primary: #1F1F1F;
+  --color-text-secondary: #666666;
+
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  /* ========== Brand Colors ========== */
+  --color-primary: #1290A4;
+  --color-primary-hover: #0D41E9;
+
+  --color-accent: #F46F7C;
+
+  /* ========== UI Surfaces ========== */
+  --color-input-bg: #E8F1F3;
+
+  /* ========== Optional States (Future-proofing) ========== */
+  --color-border: #E0E0E0;
+  --color-muted: #999999;
+}
+
+
+
+
+
+
+/* section: header */
+.header .container{
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid rgb(201, 196, 196);
+  box-shadow: 2px 2px 10px #f1eaeb;
+}
+.header .container .logo-area img {
+  height: auto;
+  width: 130px;
+  animation: floatSide 2.5s ease-in-out infinite;
+}
+.header .container .nav-bar{
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.header .container .btn-area{
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.header .container .nav-area .nav-bar .nav-item .nav-link{
+  font-size: 20px;
+  color: var(--color-bg-dark);
+  transition: .3s ease-in-out;
+}
+.header .container .nav-area .nav-bar .nav-item .nav-link:hover{
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+.header .container .btn-area .browse-asset a{
+  font-size: 20px;
+  color: var(--color-text-primary);
+  transition: .3s ease-in-out;
+}
+.header .container .btn-area .browse-asset a:hover{
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+.header .container .btn-area .clone-demo button, 
+.hero .container .form .email-form .btn,
+.pricing .container .pricing-area .pricing-info .button .btn{
+  font-size: 20px;
+  padding: 8px 16px;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: .3s ease-in-out;
+}
+.header .container .btn-area .clone-demo button:hover,
+.hero .container .form .btn:hover,
+.pricing .container .pricing-area .pricing-info .button .btn:hover{
+  background-color: var(--color-accent);
+}
+
+
+/* section: hero */
+.hero .container{
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 0;
+}
+.hero .container .hero-info{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.hero .container .hero-info .head h1{
+  font-size: 65px;
+}
+.hero .container .hero-info .para p{
+  font-size: 25px;
+  color: var(--color-bg-dark);
+  word-spacing: 3px;
+  letter-spacing: 1.2px;
+}
+.hero .container .form .email-form{
+  display: flex;
+  gap: 10px;
+}
+.hero .container .form .email-form input{
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  font-size: 17px;
+  background-color: #E8F1F3;
+  border-radius: 3px;
+}
+.hero .container .sign-in span{
+  color: var(--color-text-secondary);
+}
+.hero .container .sign-in a{
+  color: var(--color-primary);
+  transition: .3s ease-in-out;
+}
+.hero .container .sign-in a:hover,
+.mark-step .container .content-area .content .content-link a:hover,
+.response .container .response-info .link a:hover{
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+.hero .container .hero-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* section: mark-step */
+.mark-step{
+  background-color: #EEF4F5;
+  padding: 20px 0;
+}
+.mark-step .container{
+  flex-direction: column;
+}
+.mark-step .container .heading{
+  padding: 10px;
+}
+.mark-step .container .heading h2{
+  font-size: 40px;
+  text-align: center;
+}
+.mark-step .container .content-area{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+  gap: 60px;
+  width: 90%;
+  margin: 0 auto;
+}
+.mark-step .container .content-area .content{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  width: 27%;
+  background-color: var(--color-white);
+  padding: 20px;
+}
+.mark-step .container .content-area .content .content-logo .logo-circle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: #eee7e8;
+  transition: .3s ease-in-out;
+}
+.mark-step .container .content-area .content .content-logo .logo-circle:hover{
+  background-color: #FBD0D4;
+}
+.mark-step .container .content-area .content .content-logo .logo-circle i{
+  font-size: 35px;
+  color: var(--color-accent);
+}
+.mark-step .container .content-area .content .content-heading h4{
+  font-size: 30px;
+}
+.mark-step .container .content-area .content .content-para p{
+  font-size: 20px;
+  word-spacing: 3px;
+  letter-spacing: 1.1px;
+  text-align: justify;
+  color: var(--color-bg-dark);
+}
+.mark-step .container .content-area .content .content-link a, 
+.response .container .response-info .link a{
+  color: var(--color-primary);
+  transition: .3s ease-in-out;
+}
+
+
+/* section: response */
+.response .container{
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.response .container .response-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 40%;
+}
+.response .container .response-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  gap: 40px;
+  width: 40%;
+}
+.response .container .response-info .heading h2{
+  font-size: 65px;
+}
+.response .container .response-info .para p{
+    font-size: 20px;
+    word-spacing: 3px;
+    letter-spacing: 1.3px;
+}
+
+
+/* section: pricing */
+.pricing{
+  padding: 50px 20px;
+  background-color: var(--color-bg-dark);
+}
+.pricing .container{
+  flex-direction: column;
+  gap: 20px;
+}
+.pricing .container .heading h2{
+  text-align: center;
+  font-size: 45px;
+  color: var(--color-white);
+  letter-spacing: 1.3px;
+}
+.pricing .container .para{
+  width: 50%;
+  margin: 0 auto;
+}
+.pricing .container .para p{
+  text-align: center;
+  font-size: 20px;
+  color: var(--color-text-secondary);
+  letter-spacing: 1.2px;
+}
+.pricing .container .pricing-link{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.pricing .container .pricing-link span{
+  color: var(--color-text-secondary);
+  letter-spacing: 1.1px;
+}
+.pricing .container .pricing-link a{
+  color: var(--color-white);
+}
+.pricing .container .pricing-link a:hover{
+  text-decoration: underline;
+}
+.pricing .container .pricing-area{
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+.pricing .container .pricing-area .pricing-info{
+  background-color: var(--color-white);
+  width: 30%;
+  padding: 60px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.pricing .container .pricing-area .pricing-info .text span{
+  font-size: 18px;
+  color: var(--color-bg-dark);
+}
+.pricing .container .pricing-area .pricing-info .price-area{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.pricing .container .pricing-area .pricing-info .price-area .price span{
+  font-size: 50px;
+  font-weight: 800;
+}
+.pricing .container .pricing-area .pricing-info .price-area .text span{
+  font-size: 25px;
+}
+.pricing .container .pricing-area .pricing-info .price-para p{
+  font-size: 15px;
+  color: var(--color-bg-dark);
+  word-spacing: 1.1px;
+  text-align: left;
+  line-height: 1.3;
+}
+.pricing .container .pricing-area .points{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.pricing .container .pricing-area .points .point{
+  display: flex;
+  gap: 10px;
+}
+
+
+/* section: footer */
+.footer .container{
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+  gap: 20px;
+}
+.footer .container .footer-left{
+  width: 30%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer .container .footer-left .text p{
+  font-size: 15px;
+  color: var(--color-bg-dark);
+  text-align: justify;
+}
+.footer .container .footer-left .social-link{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.footer .container .footer-left .social-link .social-area{
+  display: flex;
+  gap: 20px;
+}
+.footer .container .footer-left .social-link .social-area .social{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  transition: .3s ease-in-out;
+}
+.footer .container .footer-left .social-link .social-area .social:hover{
+  background-color: var(--color-accent);
+}
+.footer .container .footer-left .social-link .social-area .social i{
+  font-size: 17px;
+  color: var(--color-white);
+}
+.footer .container .footer-left .social-link .project{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.footer .container .footer-left .social-link .project .project-link i{
+  font-size: 25px;
+  color: var(--color-primary);
+}
+
+.footer .container .footer-right{
+  width: 70%;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.footer .container .footer-right .links{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer .container .footer-right .links .link-text{
+  padding-bottom: 20px;
+}
+.footer .container .footer-right .links .link-text span{
+  color: var(--color-text-secondary);
+  font-weight: 800;
+}
+.footer .container .footer-right .links .link a{
+  color: var(--color-black);
+  transition: .3s ease-in-out;
+  font-weight: 500;
+}
+.footer .container .footer-right .links .link a:hover{
+  color: var(--color-primary);
+}
