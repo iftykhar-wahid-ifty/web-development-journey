@@ -1,0 +1,364 @@
+/* for all */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    display: flex;
+    padding: 30px;
+    gap: 20px;
+}
+.glow {
+    transition: text-shadow 0.25s ease;
+}
+.glow:hover {
+    text-shadow: 
+        0 0 1px var(--color-navy-mid),
+        0 0 3px var(--color-navy-deep);
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+    --color-navy-deep:      #132139;
+    --color-navy-mid:       #2E3B50;
+    --color-blue-primary:   #3667BA;
+    --color-white:          #FFFFFF;
+    --color-black:          #000000;
+}
+
+
+
+/* header */
+#header .container{
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+}
+#header .container .logo-area{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+#header .container .logo-area i{
+    font-size: 30px;
+    color: #c23616;
+}
+#header .container .logo-area span{
+    font-size: 20px;
+    color: var(--color-navy-mid);
+}
+#header .container .nav-area .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+#header .container .nav-area .nav .nav-item{
+    border: 1px solid transparent;
+    padding: 4px 8px;
+    border-radius: 5px;
+    transition: all .4s ease-in-out;
+}
+#header .container .nav-area .nav .nav-item .nav-link{
+    color: var(--color-navy-deep);
+    font-weight: 600;
+}
+#header .container .nav-area .nav .nav-item:hover{
+    background-color: var(--color-blue-primary);
+}
+#header .container .nav-area .nav .nav-item:hover .nav-link{
+    color: var(--color-white);
+}
+
+
+
+/* hero */
+#hero{
+    background-color: var(--color-navy-deep);
+    padding: 100px 20px;
+    color: var(--color-white);
+}
+#hero .container{
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+#hero .container .head h1{
+    font-size: 70px;
+}
+#hero .container .para{
+    width: 60%;
+    margin: 0 auto;
+}
+#hero .container .para p{
+    font-size: 15px;
+    color: #cec8c6;
+}
+#hero .container .btn-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#hero .container .btn-area button{
+    border: none;
+    outline: none;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+#hero .container .btn-area .request:hover, 
+#hero .container .btn-area .learn-more:hover
+{
+    background-color: #c23616;
+    border: 1px solid transparent;
+}
+#hero .container .btn-area button.request{
+    background-color: var(--color-blue-primary);
+    color: var(--color-white);
+    border: 1px solid transparent;
+}
+#hero .container .btn-area button.learn-more{
+    background-color: transparent;
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+}
+
+
+
+/* feature */
+#feature{
+    background-color: #f5f0ef;
+    padding: 50px;
+}
+#feature .container{
+    width: 80%;
+    margin: 0 auto;
+}
+#feature .container .features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+#feature .container .features .feature-items{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid rgb(177, 168, 168);
+    border-radius: 10px;
+}
+#feature .container .feature-items .feature-logo i{
+    font-size: 50px;
+    color: var(--color-navy-deep);
+    transition: all .3s ease-in-out;
+}
+#feature .container .feature-items .feature-logo i:hover{
+    color: #c23616;
+}
+#feature .container .feature-items .feature-head span{
+    font-size: 20px;
+    font-weight: 600;
+}
+#feature .container .feature-items .feature-para p{
+    font-size: 15px;
+    color: #2f3640;
+}
+
+
+
+/* service */
+#service{
+    padding: 30px;
+}
+#service .container{
+    gap: 50px;
+    width: 75%;
+    margin: 0 auto;
+    align-items: center;
+}
+#service .container .img-area img{
+    width: 400px;
+    height: auto;
+}
+#service .container .content-area{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: justify;
+}
+#service .container .content-area .content-head h3{
+    font-size: 35px;
+}
+#service .container .content-area .content-para p{
+    color: #2f3640;
+}
+#service .container .content-area .content-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#service .container .content-area .content-info .info-up,
+#service .container .content-area .content-info .info-down{
+    display: flex;
+    gap: 30px;
+}
+#service .container .content-area .content-info .info-up .item,
+#service .container .content-area .content-info .info-down .item{
+    display: flex;
+    gap: 10px;
+}
+#service .container .content-area .content-info .info-up .item .tick i,
+#service .container .content-area .content-info .info-down .item .tick i{
+    color: #c23616;
+}
+#service .container .content-area .content-info .info-up .item .content,
+#service .container .content-area .content-info .info-down .item .content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#service .container .content-area .content-info .info-up .item .content .head span,
+#service .container .content-area .content-info .info-down .item .content .head span{
+    font-size: 18px;
+    font-weight: 600;
+    transition: all .2s ease-in-out;
+}
+#service .container .content-area .content-info .info-up .item .content:hover .head span,
+#service .container .content-area .content-info .info-down .item .content:hover .head span{
+    color: #c23616;
+}
+#service .container .content-area .content-info .info-up .item .content .para span,
+#service .container .content-area .content-info .info-down .item .content .para span{
+    font-size: 13px;
+    color: #2f3640;
+}
+
+
+
+/* location */
+#location{
+    padding: 50px;
+    background-color: #fcf8f8;
+}
+#location .container{
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+#location .container .head h3{
+    font-size: 30px;
+}
+#location .container .para p{
+    font-size: 20px;
+    color: #2f3640;
+}
+#location .container .map{
+    width: 65%;
+}
+#location .container .loc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+#location .container .loc .logo i{
+    color: #c23616;
+}
+#location .container .loc .name span{
+    color: #2f3640;
+    transition: all .3s ease-in-out;
+}
+#location .container .loc .name span:hover{
+    color: #c23616;
+}
+
+
+
+/* contact */
+#contact{
+    padding: 50px;
+}
+#contact .container{
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+#contact .container .contact-basic,
+#contact .container .contact-links,
+#contact .container .contact-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#contact .container .contact-basic .head h4,
+#contact .container .contact-links .head h4,
+#contact .container .contact-info .head h4{
+    font-size: 25px;
+}
+#contact .container .contact-basic .para p{
+    font-size: 15px;
+    color: #2f3640;
+}
+#contact .container .contact-basic .links{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#contact .container .contact-basic .links .social{
+    display: flex;
+    gap: 15px;
+}
+#contact .container .contact-basic .links .social i,
+#contact .container .contact-basic .links .project i{
+    font-size: 20px;
+    color: var(--color-navy-deep);
+    transition: all .3s ease-in-out;
+}
+#contact .container .contact-basic .links .social i:hover,
+#contact .container .contact-basic .links .project i:hover{
+    color: #c23616;
+}
+#contact .container .contact-links .link .nav{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+#contact .container .contact-links .link .nav .nav-item .nav-link,
+#contact .container .contact-info .info .info-item .text span{
+    color: var(--color-navy-deep);
+    transition: all .3s ease-in-out;
+}
+#contact .container .contact-links .link .nav .nav-item .nav-link:hover{
+    color: #c23616;
+}
+#contact .container .contact-info .info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#contact .container .contact-info .info .info-item{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+#contact .container .contact-info .info .info-item .logo i{
+    color: #c23616;
+}
+#contact .container .contact-info .info .info-item .text span:hover{
+    color: #c23616;
+}
